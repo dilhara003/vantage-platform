@@ -1,6 +1,6 @@
 import theme from '../theme';
 
-const STEPS = ['Intake', 'Assessment', 'Report'];
+const STEPS = ['Intake', 'Assessment', 'Analyzing', 'Report'];
 
 export default function Stepper({ current = 0 }) {
   return (

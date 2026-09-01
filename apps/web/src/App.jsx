@@ -1,14 +1,10 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Landing from './pages/Landing';
-import ModulePage from './pages/ModulePage';
+import Shell from './components/Shell';
+import AIMarketingPredictor from './modules/marketing/AIMarketingPredictor';
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/modules/:moduleId" element={<ModulePage />} />
-      </Routes>
-    </BrowserRouter>
+    <Shell>
+      <AIMarketingPredictor />
+    </Shell>
   );
 }

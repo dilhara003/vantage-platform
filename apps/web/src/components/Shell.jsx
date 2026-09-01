@@ -1,7 +1,6 @@
 import theme from '../theme';
-import { Link } from 'react-router-dom';
 
-export default function Shell({ children, moduleName, backTo = '/' }) {
+export default function Shell({ children }) {
   return (
     <div
       style={{
@@ -15,59 +14,28 @@ export default function Shell({ children, moduleName, backTo = '/' }) {
           borderBottom: `1px solid ${theme.colors.border}`,
           background: theme.colors.panel,
           padding: `${theme.spacing.md}px ${theme.spacing.xl}px`,
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
         }}
       >
-        <Link
-          to={backTo}
+        <div
           style={{
-            textDecoration: 'none',
-            display: 'flex',
-            alignItems: 'center',
-            gap: theme.spacing.md,
+            fontFamily: theme.fonts.headline,
+            fontSize: 20,
+            color: theme.colors.ink,
+            letterSpacing: '0.02em',
           }}
         >
-          <span
-            style={{
-              fontFamily: theme.fonts.headline,
-              fontSize: 20,
-              color: theme.colors.ink,
-              letterSpacing: '0.02em',
-            }}
-          >
-            VANTAGE
-          </span>
-          {moduleName && (
-            <>
-              <span style={{ color: theme.colors.muted }}>/</span>
-              <span
-                style={{
-                  fontFamily: theme.fonts.body,
-                  fontSize: 14,
-                  color: theme.colors.softInk,
-                  fontWeight: 500,
-                }}
-              >
-                {moduleName}
-              </span>
-            </>
-          )}
-        </Link>
-        <Link
-          to="/"
+          AI MARKETING PREDICTOR
+        </div>
+        <p
           style={{
             fontFamily: theme.fonts.body,
             fontSize: 13,
             color: theme.colors.softInk,
-            textDecoration: 'none',
-            border: `1px solid ${theme.colors.border}`,
-            padding: '6px 14px',
+            margin: `${theme.spacing.xs}px 0 0 0`,
           }}
         >
-          All modules
-        </Link>
+          AI-powered marketing strategy for Sri Lankan tech products.
+        </p>
       </header>
       <main
         style={{
